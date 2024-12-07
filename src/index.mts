@@ -113,7 +113,7 @@ function installToClaudeDesktop(
   args: string[],
   env?: string[]
 ) {
-  const configPath =
+  let configPath =
     process.platform === "win32"
       ? path.join(
           os.homedir(),
@@ -129,6 +129,9 @@ function installToClaudeDesktop(
           "Claude",
           "claude_desktop_config.json"
         );
+  if (process.argv.length > 2) {
+    configPath = process.argv[2];
+  }
 
   let config: any;
   try {
