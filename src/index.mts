@@ -235,7 +235,7 @@ async function installLocalMcpServer(
           type: "text",
           text: `Installed the following servers via npm successfully! ${Object.keys(
             servers
-          ).join(";")} Tell the user to restart the app`,
+          ).join(";")}`,
         },
       ],
     };
@@ -276,7 +276,7 @@ async function installRepoMcpServer(
       content: [
         {
           type: "text",
-          text: "Installed MCP server via npx successfully! Tell the user to restart the app",
+          text: "Installed MCP server via npx successfully!",
         },
       ],
     };
@@ -300,7 +300,7 @@ async function installRepoMcpServer(
     content: [
       {
         type: "text",
-        text: "Installed MCP server via uvx successfully! Tell the user to restart the app",
+        text: "Installed MCP server via uvx successfully!",
       },
     ],
   };
